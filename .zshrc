@@ -1,7 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:~/.composer/vendor/bin
 eval $(thefuck --alias)
-source ~/dotfiles/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
@@ -13,7 +12,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git thefuck)
+plugins=(git thefuck zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
