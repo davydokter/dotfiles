@@ -7,6 +7,11 @@ ZSH_THEME="robbyrussell"
 
 # SSH Aliases
 source '/Users/davydokter/Library/CloudStorage/GoogleDrive-davy@rox.nl/Shared drives/Intern/ssh-aliases.sh'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+ghpr() {
+	gh pr create --base ${1:-development} --web
+}
+
 
 zstyle ':omz:update' mode auto      # update automatically without asking
 
