@@ -7,17 +7,21 @@ ZSH_THEME="robbyrussell"
 
 # SSH Aliases
 source '/Users/davydokter/Library/CloudStorage/GoogleDrive-davy@rox.nl/Shared drives/Intern/ssh-aliases.sh'
+
+# Laravel Sail alias
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
+# function to open PR tab
 ghpr() {
 	gh pr create --base ${1:-development} --web
 }
-
 
 zstyle ':omz:update' mode auto      # update automatically without asking
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git thefuck zsh-autosuggestions)
+# ohmyzsh plugins
+plugins=(git thefuck zsh-autosuggestions gh)
 
 source $ZSH/oh-my-zsh.sh
 
