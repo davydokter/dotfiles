@@ -10,7 +10,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 COMPLETION_WAITING_DOTS="true"
 
 # Oh-my-zsh plugins
-plugins=(git thefuck gh zsh-syntax-highlighting)
+plugins=(git gh zsh-syntax-highlighting)
 source ~/dotfiles/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/dotfiles/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
