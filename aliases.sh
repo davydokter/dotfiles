@@ -1,9 +1,3 @@
-# SSH Aliases
-source '/Users/davydokter/Library/CloudStorage/GoogleDrive-davy@rox.nl/Shared drives/Intern/ssh-aliases.sh'
-
-# Thefuck alias
-eval $(thefuck --alias)
-
 # Laravel Sail alias
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 

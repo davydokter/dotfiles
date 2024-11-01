@@ -1,6 +1,6 @@
 # Define paths
 export ZSH="$HOME/.oh-my-zsh"
-export PATH=$PATH:~/.composer/vendor/bin
+export BREW="/opt/homebrew/share"
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -10,16 +10,18 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 COMPLETION_WAITING_DOTS="true"
 
 # Oh-my-zsh plugins
-plugins=(git gh zsh-syntax-highlighting)
-source ~/dotfiles/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/dotfiles/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $BREW/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $BREW/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+plugins=(git gh)
 
 # Load aliases
-source ~/aliases.sh
+source ~/dotfiles/aliases.sh
 
 # Init starship
 eval "$(starship init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
-    [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-    [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completionsource /Users/davydokter/dotfiles/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
